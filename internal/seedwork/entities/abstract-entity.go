@@ -19,7 +19,7 @@ type AbstractEntityProps struct {
 }
 
 type AbstractEntity struct {
-	uniqueEntityId valueobjects.UniqueEntityId
+	UniqueEntityId valueobjects.UniqueEntityId
 
 	CreatedAt     time.Time `json:"createdAt"`
 	UserCreatedBy *string   `json:"createdBy,omitempty"`
@@ -58,7 +58,7 @@ func NewAbstractEntity(instance AbstractEntityProps) (*AbstractEntity, error) {
 	}
 
 	return &AbstractEntity{
-		uniqueEntityId: uniqueId,
+		UniqueEntityId: uniqueId,
 		CreatedAt:      instance.CreatedAt,
 		UserCreatedBy:  instance.UserCreatedBy,
 		UpdatedAt:      instance.UpdatedAt,
